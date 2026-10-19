@@ -1,0 +1,76 @@
+/* Thiết lập chung */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    color: #333333;
+    font-size: 16px;
+    margin: 20px 0 10px 0;
+}
+
+/* Khung chứa Flex Container dùng chung */
+.container {
+    display: flex;
+    width: 600px;
+    height: 220px;
+    gap: 10px;
+    border: 2px solid #333333;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.item {
+    width: 180px;
+    height: 80px;
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #1a5276;
+}
+
+/* 1. wrap */
+.ex-wrap {
+    flex-wrap: wrap;
+}
+
+/* 2. nowrap */
+.ex-nowrap {
+    flex-wrap: nowrap;
+}
+.ex-nowrap .item {
+    background-color: lightgreen;
+    color: #1e8449;
+}
+
+/* 3. wrap-reverse */
+.ex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+.ex-wrap-reverse .item {
+    background-color: lightcoral;
+    color: #78281f;
+}
+
+/* 4. initial */
+.ex-initial {
+    flex-wrap: wrap;    /* Đặt ban đầu là wrap */
+    flex-wrap: initial; /* Reset về nowrap */
+}
+.ex-initial .item {
+    background-color: lightyellow;
+    color: #7d6608;
+    border: 1px solid #d4ac0d;
+}
